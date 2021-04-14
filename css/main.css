@@ -1,0 +1,53 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ff8080;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* New item input */
+.add-todo {
+  height: 50px;
+  padding: 0 15px;
+  width: 100%;
+  font-size: 18px;
+  border: 0;
+  background-color: white;
+  color: #ff8080;
+  margin-bottom: 40px;
+}
+
+.todo li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.todo li:last-child {
+  border-bottom: 0;
+}
+
+.todo li i {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#template {
+  display: none;
+}
