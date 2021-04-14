@@ -64,7 +64,23 @@ $(document).ready(function () {
         $(this).parent().remove();
 
 
-    })
+    });
+
+    //rendi todo completato
+
+    $("body").on("click", ".todo li .text", function () {
+
+        $(this).toggleClass("completed");
+
+
+
+    });
+
+
+
+
+
+
 
 
 })
