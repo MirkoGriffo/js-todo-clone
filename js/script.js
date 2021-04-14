@@ -9,18 +9,7 @@ Cliccando sul testo compare uno sbarramento a indicarne il completamento
 $(document).ready(function () {
 
     var todoItems = [
-        {
-            text: "prendere il latte",
-            completed: false,
-        },
-        {
-            text: "scrivere email al cliente",
-            completed: true,
-        },
-        {
-            text: "pagare le bollette",
-            completed: false,
-        },
+
     ]
 
 
@@ -35,8 +24,40 @@ $(document).ready(function () {
         var item = template.clone();
         item.find("text").text(todo.text);
 
+        //aggiunta alla lista
 
-
+        list.append(item);
     }
+    //inserimento todo
+
+    newInput.keyup(function (event) {
+
+        //console.log(event.which)
+
+        if (event.which === 13) {
+
+            var text = newInput.val().trim();
+
+            if (text !== " ") {
+
+                //template
+
+                var item = template.clone();
+                item.find(".text").text(text);
+
+                //aggiunta alla lista
+
+                list.append(item);
+
+                //reset
+                newInput.val(" ");
+
+
+            }
+        }
+    })
+
+
+
 
 })
