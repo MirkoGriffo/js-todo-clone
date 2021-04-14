@@ -57,7 +57,16 @@ $(document).ready(function () {
         }
     })
 
+    //rimozione todo item
 
+    $("body").on("click", ".todo li i", function () {
+
+        $(this).parent().remove();
+
+
+    })
 
 
 })
+
+
